@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hateous.Web", "Hateous.Web\Hateous.Web.csproj", "{9FCC72D4-0BC4-4A68-A587-A2274EB752E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hateous.Specs", "Hateous.Specs\Hateous.Specs.csproj", "{CC71F7B9-9AF3-408E-AD25-986B1B213826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hateous.Core", "Hateous.Core\Hateous.Core.csproj", "{7E1CA24D-ECAF-4858-846A-AC294DCEE9B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FCC72D4-0BC4-4A68-A587-A2274EB752E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCC72D4-0BC4-4A68-A587-A2274EB752E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCC72D4-0BC4-4A68-A587-A2274EB752E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCC72D4-0BC4-4A68-A587-A2274EB752E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC71F7B9-9AF3-408E-AD25-986B1B213826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC71F7B9-9AF3-408E-AD25-986B1B213826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC71F7B9-9AF3-408E-AD25-986B1B213826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC71F7B9-9AF3-408E-AD25-986B1B213826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1CA24D-ECAF-4858-846A-AC294DCEE9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1CA24D-ECAF-4858-846A-AC294DCEE9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1CA24D-ECAF-4858-846A-AC294DCEE9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1CA24D-ECAF-4858-846A-AC294DCEE9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
