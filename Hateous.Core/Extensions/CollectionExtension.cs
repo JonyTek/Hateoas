@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Hateous.Core.Model;
+using Hateous.Core.Relations;
 
 namespace Hateous.Core.Extensions
 {
@@ -7,7 +8,7 @@ namespace Hateous.Core.Extensions
     {
         public static void AddIfAllowed(this ICollection<IRelation> collection, IRelation relation)
         {
-            if (relation.ShouldAdd())
+            if (relation.ShouldBeExposed())
             {
                 collection.Add(relation);
             }

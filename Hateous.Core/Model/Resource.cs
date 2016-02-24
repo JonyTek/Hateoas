@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Hateous.Core.Relations;
 
 namespace Hateous.Core.Model
 {

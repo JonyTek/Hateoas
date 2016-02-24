@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Http;
+using System.Web.Http.Routing;
 using Hateous.Core.Enrichers;
 using Hateous.Core.Model;
 using Hateous.Core.Services;
@@ -25,6 +26,8 @@ namespace Hateous.Web.Controllers
         [Route("posts/{id}")]
         public BlogPost Get(Guid id)
         {
+            var t = this;
+            //new UrlHelper().Link()
             var post = blogPostService.Retrieve(id);
             var user = userService.Retrieve(new Guid());
            

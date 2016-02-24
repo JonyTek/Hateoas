@@ -11,16 +11,15 @@ namespace Hateous.Core.Relations
 
         protected TDomainModel Model;
 
-        public abstract bool ShouldAdd();
-
         public abstract string Rel { get; }
 
         public abstract string Href { get; }
 
-        //[JsonIgnore]
-        protected abstract HttpMethod HttpMethod { get; }
+        public abstract bool ShouldBeExposed();
 
         public string Method => HttpMethod.ToString();
+
+        protected abstract HttpMethod HttpMethod { get; }
 
         protected BaseRelation(User user, TDomainModel model)
         {

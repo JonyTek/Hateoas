@@ -8,7 +8,7 @@ namespace Hateous.Core.Enrichers
     {
         public BlogPost Enrich(User user, BlogPost model)
         {
-            model.Links.AddIfAllowed(new ProductEdit(user, model));
+            model.Links.AddIfAllowed(new ProductUpdateRelation(user, model));
 
             return model;
         }
