@@ -1,4 +1,5 @@
-﻿using System.Web.Routing;
+﻿using System.Net.Http;
+using System.Web.Routing;
 using Hateous.Core.Model;
 
 namespace Hateous.Core.Relations
@@ -7,7 +8,10 @@ namespace Hateous.Core.Relations
     {
         public override string Rel => "edit-product";
 
-        public override string Href => "XXXXXXX";
+        public override string Href
+        {
+            get { var helper = new UrlHelper(); }
+        };
 
         public override bool ShouldBeExposed()
         {
@@ -23,5 +27,12 @@ namespace Hateous.Core.Relations
             : base(user, model)
         {
         }
+    }
+
+    public interface IActionDefinition
+    {
+        string Action { get; }
+
+        string Controller { get; }
     }
 }

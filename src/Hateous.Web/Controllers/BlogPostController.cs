@@ -30,7 +30,8 @@ namespace Hateous.Web.Controllers
             //new UrlHelper().Link()
             var post = blogPostService.Retrieve(id);
             var user = userService.Retrieve(new Guid());
-           
+            System.Web.Http.
+            var h = new UrlHelper();
             return enricher.Enrich(user, post);
         }
     }
