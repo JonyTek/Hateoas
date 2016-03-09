@@ -62,10 +62,6 @@
       <Project>{7e1ca24d-ecaf-4858-846a-ac294dcee9b8}</Project>
       <Name>Hateous.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Hateous.Web\Hateous.Web.csproj">
-      <Project>{9fcc72d4-0bc4-4a68-a587-a2274eb752e2}</Project>
-      <Name>Hateous.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

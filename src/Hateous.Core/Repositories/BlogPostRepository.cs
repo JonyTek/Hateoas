@@ -9,7 +9,7 @@ namespace Hateous.Core.Repositories
         {
             return new BlogPost
             {
-                Id = Guid.NewGuid(),
+                Id = id,
                 Title = "My first blog post"
             };
         }

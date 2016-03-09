@@ -20,8 +20,7 @@ namespace Hateous.Core.Model
         public bool HasPermissionsFor<TDomainModel>(ActionType action)
             where TDomainModel : IDomainModel
         {
-            var role = Roles.FirstOrDefault(x => x.Can<TDomainModel>(action));
-            return role != null;
+            return Roles.FirstOrDefault(x => x.Can<TDomainModel>(action)) != null;
         }
     }
 }

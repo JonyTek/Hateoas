@@ -1,14 +1,16 @@
-﻿using Hateous.Core.Extensions;
+﻿using System;
+using System.Web.Routing;
+using Hateous.Core.Extensions;
 using Hateous.Core.Model;
 using Hateous.Core.Relations;
 
 namespace Hateous.Core.Enrichers
 {
-    public class BlogPostEnricher : IEnrichDomain<BlogPost>
+    public class BlogPostEnricher : AbstractEnricher<BlogPost>
     {
-        public BlogPost Enrich(User user, BlogPost model)
+        public override BlogPost ThenEnrich(BlogPost model)
         {
-            model.Links.AddIfAllowed(new ProductUpdateRelation(user, model));
+            model.Links.AddIfAllowed(RelationFactory.Create(() => new BlogPostUpdateRelation(model)));
 
             return model;
         }

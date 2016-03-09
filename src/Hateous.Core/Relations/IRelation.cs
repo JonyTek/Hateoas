@@ -1,4 +1,6 @@
-﻿using System.Web.Routing;
+﻿using System;
+using System.Web.Routing;
+using Hateous.Core.Model;
 
 namespace Hateous.Core.Relations
 {
@@ -6,12 +8,8 @@ namespace Hateous.Core.Relations
     {
         bool ShouldBeExposed();
 
-        string Rel { get; }
+        User User { get; set; }
 
-        string Href { get; }
-
-        string Method { get; }
-
-        RouteValueDictionary GetRouteValues();
+        Func<string, RouteValueDictionary, string> UrlBuilderFunc { get; set; }
     }
 }
