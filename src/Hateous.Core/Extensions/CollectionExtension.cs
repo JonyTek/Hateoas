@@ -10,7 +10,7 @@ namespace Hateous.Core.Extensions
         {
             if (relation.User == null || relation.UrlBuilderFunc == null)
             {
-                throw new InvalidOperationException("you must add relations via the relation factory");
+                throw new InvalidOperationException("Relations must be set via relation factory");
             }
 
             if (relation.ShouldBeExposed())

@@ -1,19 +1,21 @@
 ﻿using System.Web.Routing;
 using Hateous.Core.Model;
+using Hateous.Core.Util;
 
 namespace Hateous.Core.Relations
 {
     public class BlogPostUpdateRelation : UpdateRelation<BlogPost>
     {
-        public BlogPostUpdateRelation(BlogPost model) : base(model)
+        public BlogPostUpdateRelation(BlogPost model)
+            : base(model)
         {
         }
 
         public override string Rel => "edit-blog-post";
 
-        public override string RouteName => "edit-blog-post";
+        protected override string RouteName => Routes.BlogPost.EditBlogPost;
 
-        public override RouteValueDictionary RouteValues => new RouteValueDictionary {{"id", Model.Id}};
+        protected override RouteValueDictionary RouteValues => new RouteValueDictionary {{"id", Model.Id}};
 
         public override bool ShouldBeExposed()
         {

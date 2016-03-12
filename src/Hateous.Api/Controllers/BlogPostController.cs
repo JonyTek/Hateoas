@@ -3,6 +3,7 @@ using System.Web.Http;
 using Hateous.Core.Enrichers;
 using Hateous.Core.Model;
 using Hateous.Core.Services;
+using Hateous.Core.Util;
 
 namespace Hateous.Api.Controllers
 {
@@ -20,7 +21,7 @@ namespace Hateous.Api.Controllers
         }
 
         [HttpGet]
-        [Route("posts/{id:guid}", Name = "get-blog-post")]
+        [Route("posts/{id:guid}", Name = Routes.BlogPost.GetBlogPost)]
         public BlogPost Get(Guid id)
         {
             var post = blogPostService.Retrieve(id);
@@ -29,7 +30,7 @@ namespace Hateous.Api.Controllers
         }
 
         [HttpPost]
-        [Route("posts/{id:guid}", Name = "edit-blog-post")]
+        [Route("posts/{id:guid}", Name = Routes.BlogPost.EditBlogPost)]
         public BlogPost Edit(Guid id)
         {
             var post = blogPostService.Retrieve(id);

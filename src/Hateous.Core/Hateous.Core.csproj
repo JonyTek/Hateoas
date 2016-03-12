@@ -52,7 +52,7 @@
     <Compile Include="Enrichers\AbstractEnricher.cs" />
     <Compile Include="Enrichers\BlogPostEnricher.cs" />
     <Compile Include="Extensions\CollectionExtension.cs" />
-    <Compile Include="Model\Actiontype.cs" />
+    <Compile Include="Model\ActionType.cs" />
     <Compile Include="Model\BlogPost.cs" />
     <Compile Include="Model\IDomainModel.cs" />
     <Compile Include="Enrichers\IEnrichDomain.cs" />
@@ -73,6 +73,7 @@
     <Compile Include="Services\IBlogPostService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Util\Routes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

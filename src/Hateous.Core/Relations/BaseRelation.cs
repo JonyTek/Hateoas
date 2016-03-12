@@ -16,28 +16,25 @@ namespace Hateous.Core.Relations
 
         public abstract string Rel { get; }
 
-        [JsonIgnore]
-        public abstract string RouteName { get; }
-
-        [JsonIgnore]
-        protected abstract HttpMethod HttpMethod { get; }
-
-        public abstract bool ShouldBeExposed();
-
-        [JsonIgnore]
-        public abstract RouteValueDictionary RouteValues { get; }
-
-        [JsonIgnore]
-        public User User { get; set; }
-
-        [JsonIgnore]
-        public TDomainModel Model { get; set; }        
-
         public string Method => HttpMethod.ToString();
 
         public string Href => UrlBuilderFunc(RouteName, RouteValues);
 
+        protected abstract string RouteName { get; }
+
+        protected abstract HttpMethod HttpMethod { get; }
+
+        protected abstract RouteValueDictionary RouteValues { get; }
+
         [JsonIgnore]
-        public Func<string, RouteValueDictionary, string> UrlBuilderFunc { get; set; }      
+        public User User { get; set; }
+
+        protected TDomainModel Model { get; set; }        
+
+        [JsonIgnore]
+        public Func<string, RouteValueDictionary, string> UrlBuilderFunc { get; set; }
+
+        public abstract bool ShouldBeExposed();
+         
     }
 }
